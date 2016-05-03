@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html lang="en-GB">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Nova Gallery - HTML5 Multimedia Gallery (Gallery Fixed Width)</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:700,300|Oswald' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="mediaelement/mediaelementplayer.min.css"/>
+	<link rel="stylesheet" href="css/style-dark.css" />
+	<link rel="stylesheet" href="css/novagallery-dark.css" />
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<style>
+		#container {
+			width: 800px;
+			height: 600px;
+			margin: 40px auto 0 auto;
+			border: 5px solid #aaa;
+			overflow: auto;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+		}
+	</style>
+
+
+</head>
+<body>
+
+	<div id="container">
+		<div id="novaGallery">
+
+			<div id="novaGallerySets">
+				<ul>
+
+				</ul>
+			</div>  <!-- end #novaGallerySets -->
+
+
+			<div id="novaGalleryWrapper">
+				<menu type="toolbar">
+					<a id="showNGMenu" class="navButton"><span>&#9776;</span> Gallery Menu</a>
+
+					<div id="mainNGMenu">
+						<div class="buttonset">
+							<a class="navButton" id="gotoSets">Back</a>
+							<a id="goFullscreen" class="navButton">Full Screen</a>
+						</div>
+
+						<div class="buttonset" id="displayButtons">
+							<a class="navButton" data-mode="thumbnails">Thumbnails</a>
+							<a class="navButton" data-mode="fullwidth">Full Width</a>
+						</div>
+
+						<div class="buttonset" id="filterButtons">
+							<a class="navButton top">Filter</a>
+							<ul>
+								<li><a class="startCategory" data-type="all">All</a></li>
+								<li><a data-type="photo">Photo</a></li>
+								<li><a data-type="audio">Audio</a></li>
+								<li><a data-type="video">Video</a></li>
+								<li><a data-category="Category One">Category One</a></li>
+								<li><a data-category="Category Two">Category Two</a></li>
+								<li><a data-category="Category Three">Category Three</a></li>
+							</ul>
+						</div>
+					</div>
+				</menu>
+
+				<div id="novaThumbGrid" class="displayStyle" data-display="thumbnails">
+					<ul>
+					</ul>
+				</div>  <!-- end #novaThumbGrid -->
+
+
+				<div id="novaFull" class="displayStyle" data-display="fullwidth">
+					<div class="fwmedia">
+
+					</div>
+
+					<div class="fwBottom">
+						<div class="thumbnails">
+							<a class="slide-prev"></a>
+							<ul>
+							</ul>
+							<a class="slide-next"></a>
+						</div>
+
+						<div class="bottom-bar">
+							<div class="progress"></div>
+							<p class="slide-number"></p>
+							<p class="title"></p>
+							<div class="fw-controls">
+								<a class="slideshow"></a>
+								<a class="prev" title="Previous Item"></a>
+								<a class="next" title="Next Item"></a>
+								<a class="info"></a>
+								<a class="resize"></a>
+								<a class="showThumbs" title="Show/Hide Thumbnails"></a>
+							</div>
+						</div>
+					</div>
+				</div>  <!-- end #novaFull -->
+
+			</div>  <!-- end #novaGalleryWrapper -->
+
+
+		</div>  <!-- end #novaGallery -->
+	</div>  <!-- end #container -->
+
+
+
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>!window.jQuery && document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+	<script src="js/modernizr.custom.js"></script>
+	<script src="js/jquery.transit.min.js"></script>
+	<script src="js/innershiv.min.js"></script>
+	<script src="js/jquery.masonry.min.js"></script>
+	<script src="mediaelement/mediaelement-and-player.min.js"></script>
+	<script src="js/jquery.novagallery.min.js"></script>
+
+	<script>
+		$.novaGallery({
+			startMode: 'fullwidth',
+			displayType: 'container'
+		});
+	</script>
+
+</body>
+</html>
